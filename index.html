@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat</title>
+  <link rel="stylesheet" href="assets/css.css">
+</head>
+<body style="display:flex; flex-direction: row;">
+
+
+<!-- Login -->
+<div class="nickname_container" id="nick">
+  <span>Infome seu nome:</span>
+  <form id="submit"><input type="text" id="nickname" /></form>
+</div>
+
+<!--chat -->
+<div id="chat" style="width:100%" hidden>
+
+  <div class="menu" style="width: 100%;">
+      <div class="name" id="name"></div>
+      <div class="last" id="time"></div>
+
+      <div style="width: 200px; justify-content: flex-end; float:right; padding-top: 20px;">
+          Usuários Online
+      </div>
+  </div>
+
+  <ol class="chat">
+
+  </ol>
+
+  <input class="textarea" type="text" placeholder="Digite aqui!" id="textarea" />
+</div>
+
+<!-- Menu Online -->
+<div id="menu" class="" style="width: 323px; justify-content: flex-end; background-color:#F36C44; height: 100%; margin-top:50px;" hidden>
+    <div>
+        <ul id="list_users_online">
+
+        </ul>
+    </div>
+</div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/socket.io-client/socket.io.js"></script>
+    <script src="assets/js.js"></script>
+</body>
+</html>
